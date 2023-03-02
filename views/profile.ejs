@@ -1,0 +1,46 @@
+<%- include('header') %>
+
+    <section style="background-color: #eee;">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" class="rounded-circle img-fluid" style="width: 150px;">
+                            <h5 class="my-3">
+                                <%= locals.userLogin.name %>
+                            </h5>
+                            <h6 class="my-3">
+                                <%= locals.userLogin.email %>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title">My Profile</h4>
+                            <form class="forms-sample" method="post" action="profileData">
+                                <input type="hidden" value="<%=  locals.userLogin.id %>" />
+                                <div class="form-group">
+                                    <input type="text" name="name" value="<%=  locals.userLogin.name %>"
+                                        class="form-control" id="exampleInputName1" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" value="<%=  locals.userLogin.email %>"
+                                        class="form-control" id="exampleInputEmail3" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" value="<%=  locals.userLogin.password %>"
+                                        class="form-control" id="exampleInputPassword4" placeholder="Password">
+                                </div>
+                                <input type="submit" class="btn btn-primary btn-lg font-weight-medium auth-form-btn">
+                                <button class="btn btn-primary btn-lg font-weight-medium auth-form-btn">Cancel</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <%- include('footer') %>

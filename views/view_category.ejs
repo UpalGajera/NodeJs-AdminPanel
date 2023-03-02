@@ -1,0 +1,32 @@
+<%- include('header') %>
+
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Category</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% let cnt=0; %>
+                                <% allcategorydata.map((val)=> {
+                                    cnt++;
+                                    const {id, category} = val;
+                                    %>
+                                    <tr>
+                                        <td><%= cnt %></td>
+                                        <th scope="row"><%= category %></th>
+                                    </tr>
+                               <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<%- include('footer') %>

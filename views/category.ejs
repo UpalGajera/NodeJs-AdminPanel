@@ -1,0 +1,22 @@
+<%- include('header') %>
+    <div class="container-scroller">
+        <div class="content-wrapper d-flex  auth px-0">
+            <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+                <div class="brand-logo">
+                    <h1>Category</h1>
+                </div>
+                <form class="pt-3" method="post" action="/categoryData">
+                    <div class="form-group">
+                        <input type="text" name="category" class="form-control form-control-lg" placeholder="Enter Your Category">
+                    </div>
+                    <div class="mt-3">
+                        <input value="ADD" type="submit"
+                            class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <%- include('footer') %>
