@@ -33,7 +33,7 @@ const registerData = async (req,res) => {
             name: req.body.name,
             email: req.body.email,
             password: req.body.password,
-            avatar : req.body.avatar,
+            avatar : req.body.avatar,   
         })
         if (register) {
             console.log("Record successfully insert");
