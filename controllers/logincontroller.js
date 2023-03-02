@@ -1,6 +1,7 @@
 const Registermodel = require('../models/Registermodel');
 const path = require('path');
 const fs = require('fs');
+const { Console } = require('console');
 const uploads = path.join('uploads');
 
 const login = (req, res) => {
@@ -20,6 +21,7 @@ const register = (req,res) => {
 
 const registerData = async (req,res) => {
     console.log(req.body);
+    // console.log(uploadimg)
     try {
         let avatar = ""
         if(req.file) 
@@ -31,7 +33,7 @@ const registerData = async (req,res) => {
             name: req.body.name,
             email: req.body.email,
             password: req.body.password,
-            avatar : avatar
+            avatar : req.body.avatar,
         })
         if (register) {
             console.log("Record successfully insert");

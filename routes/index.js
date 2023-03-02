@@ -10,7 +10,8 @@ const categorycontroller = require('../controllers/categorycontroller');
 const subcategorycontroller = require('../controllers/subcategorycontroller');
 
 // File Upload
-const uploads = path.join('uploads');
+// const uploads = path.join('uploads');
+const uploads = path.join("uploads")
 
 const multer = require('multer');
 
@@ -23,6 +24,7 @@ const storage = multer.diskStorage({
     }
 });
 const uploadimg = multer({storage : storage}).single('avatar');
+console.log(uploadimg);
 
 // logincontroller
 routes.get('/', logincontroller.login)
