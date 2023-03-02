@@ -25,7 +25,7 @@ const registerData = async (req,res) => {
         if(req.file) 
         {
             avatar = uploads+"/"+req.file.filename
-        }
+        } 
 
         let register = await Registermodel.create({
             name: req.body.name,
