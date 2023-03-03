@@ -20,7 +20,7 @@ const emaildata = async (req,res) => {
                 from: 'upalgajera@gmail.com',
                 to: email,
                 subject: 'Forgot password',
-                text: 'Otp :- '+otp
+                text: 'One time of Password :- '+otp
             };
 
             transporter.sendMail(mailOptions, function (error, info) {
